@@ -1,0 +1,11 @@
+   - print the first 1 to 10 numbers
+     - print 1 to 1000 numbers
+     - print 1 to 1000 only odd numbers
+     - print 1 to 1000 only even numbers
+     - print prime numbers 1 to 10:  1 3 5 7 11 13 17 
+     - check the given string is palindrome - A nut for a jar of tuna.
+     - find the factorial of 1 to 10
+     - find the gcd() of two numbers
+     - generate the 10 random numbers
+     - sort the generaed random numbers
+     - from random numbers, find smallest, biggest, average, median, mode
