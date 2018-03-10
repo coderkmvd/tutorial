@@ -1,0 +1,112 @@
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="title"></p>
+<p id="result"></p>
+<h1>
+	test
+</h1>
+
+<pre>
+<code>
+	https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics
+
+variable
+	string
+	number
+	boolean
+	array
+	object
+
+operator
+   +,-,*,/, = , ===, !, !=
+
+condition
+    if else
+function
+    alert('say')
+
+    function multiply(num1,num2) {
+ 		 var result = num1 * num2;
+  		return result;
+	}
+
+events
+     ...onclick = function() {
+    alert('Ouch! Stop poking me!');
+	}
+
+HTML5 Web Storage
+       https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+		localStorage
+		sessionStorage 
+
+  
+<code>
+</pre>
+
+<button name="poke" type="button" onclick="onpoke()" >poke me</button>
+<button type="button" onclick="alert('hi')">Say Hi!</button>
+
+<button onclick="setUserName()">Last entered name</button>
+<button onclick="setNewUserName()">Change user</button>
+
+<script>
+     
+	  var myButton = document.querySelector('button');
+	  var myHeading = document.querySelector('h1');
+
+		if(!localStorage.getItem('name')) {
+		  setUserName();
+		} else {
+		  var storedName = localStorage.getItem('name');
+		  myHeading.textContent = 'Last entered ' + storedName;
+		}
+
+		function setUserName() {
+			if(!localStorage.getItem('name')) {
+			  setNewUserName();
+			} else {
+			  var storedName = window.localStorage.getItem('name');
+			  myHeading.textContent = 'Mozilla is cool, ' + storedName;
+			}
+		}
+
+		function setNewUserName(){
+		  var myName = prompt('Please enter your name.');
+		  localStorage.setItem('name', myName);
+		  myHeading.textContent = 'Mozilla is cool, ' + myName;
+		}
+
+      function onpoke() {
+		alert('Ouch! Stop poking me!');
+      }
+
+	   function multiply(num1,num2) {
+ 		 var result = num1 * num2;
+  		return result;
+	}
+	
+
+     document.getElementById("title").innerHTML = "Learn JavaScript!";
+	 document.querySelector('h1').textContent = multiply(40,10);
+
+     /* test commens */
+
+     // single line comments
+
+    document.getElementById("result").textContent = multiply(3,2);
+
+	document.querySelector('testButton').onclick = function() {
+		alert('Ouch! Stop poking me!');
+	}  
+
+
+</script> 
+
+
+</body>
+</html>
